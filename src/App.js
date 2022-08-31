@@ -1,11 +1,12 @@
 import './App.css';
-import Clock from './components/Clock';
+import ClockList from './components/ClockList';
 
 function App() {
-  console.log('app render');
+  const quantities = [1,2,3];
   return (
     <div>
-      <Clock></Clock>
+      {/* <Clock></Clock> */}
+      <ClockList quantities ={quantities} />
     </div>
   );
 }

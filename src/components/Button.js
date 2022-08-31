@@ -17,10 +17,13 @@ class button extends React.Component {
 
     render() {
         console.log('button component');
-        const { change, locale } = this.props;
+        const { change, locale, show, enable } = this.props;
+        if(!enable) return null;
         return (
-            // <button type="button" onClick={ change }>Click Here</button>
-            <button type="button" onClick={ () => change(locale) }>Click Here</button>
+            <>
+            <button type="button" onClick={ () => change(locale) }>{ locale === 'bn-BD' ? 'Change Clock' : 'ঘড়ি পরিবর্তন করুন '}</button>
+            { show && <p>Hello</p> }
+            </>
         )
     }
 }
